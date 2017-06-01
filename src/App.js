@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Doctores from './Doctores';
 import listaPacientes from './listaPacientes';
-import store from './store';
+
 
 
 import {
