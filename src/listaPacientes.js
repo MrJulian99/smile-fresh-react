@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import pacientes from'./pacientes'
-import PacienteIndividual from'./PacienteIndividual'
+import PacienteIndividual from'./pacienteIndividual'
 
 export default class listaPacientes extends Component{
 	render(){
 		let listaPaciente =[];
 		let final = null;
-		
+
 
 
 		 	pacientes.forEach((paciente)=>{
@@ -14,9 +14,9 @@ export default class listaPacientes extends Component{
 		 			listaPaciente.push(<PacienteIndividual paciente={paciente} key={paciente.id} />);
 		 		}
 		 		final=paciente.id;
-		 	
-		 		
-		 		
+
+
+
 		 	})
 
 
@@ -32,7 +32,7 @@ export default class listaPacientes extends Component{
 					<thead>
 						<tr>
 							<th>Id</th>
-							<th>Nombre</th>	
+							<th>Nombre</th>
 							<th>Apellido</th>
 							<th>Direccion</th>
 							<th>Telefono</th>

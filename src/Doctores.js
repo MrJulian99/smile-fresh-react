@@ -29,7 +29,7 @@ export default class doctor extends Component{
       <center>
 				<div>
         <h3>Doctores</h3>
-				<table className= "table1">
+				<table className= "table3">
 					<thead>
 						<tr>
 							<th>Identificacion</th>
