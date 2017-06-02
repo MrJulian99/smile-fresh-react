@@ -28,7 +28,7 @@ export default class listaPacientes extends Component{
       <center>
 				<div>
         <h3>Pacientes</h3>
-				<table className= "App-tablas">
+				<table className= "table1">
 					<thead>
 						<tr>
 							<th>Id</th>
