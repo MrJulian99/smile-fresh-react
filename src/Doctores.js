@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 export default class doctores extends Component{
 	render(){
-		let cadadoctor =[];
-		let boton = [];
-		let termino = null;
+		
 
 
 

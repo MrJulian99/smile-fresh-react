@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
-import pacienteIndividual from'./pacienteIndividual'
+import pacientes from'./pacientes'
+import PacienteIndividual from'./PacienteIndividual'
 
 export default class listaPacientes extends Component{
 	render(){
-		let listaPacientes =[];
+		let listaPaciente =[];
 		let final = null;
-		console.log("aja");
+		
 
 
-		 if(this.props.id != null){
-		 	this.props.id.forEach((paciente)=>{
+		 	pacientes.forEach((paciente)=>{
 		 		if (paciente.id !== final){
-		 			listaPacientes.push(<pacienteIndividual paciente={paciente} key={paciente.id} />);
+		 			listaPaciente.push(<PacienteIndividual paciente={paciente} key={paciente.id} />);
 		 		}
 		 		final=paciente.id;
-		 		console.log(paciente.id);
-		 		console.log("aja");
+		 	
+		 		
 		 		
 		 	})
 
 
-		 }
+		 console.log(listaPaciente);
 
 		return(
 
@@ -32,7 +32,7 @@ export default class listaPacientes extends Component{
 					<thead>
 						<tr>
 							<th>Id</th>
-							<th>Nombre</th>
+							<th>Nombre</th>	
 							<th>Apellido</th>
 							<th>Direccion</th>
 							<th>Telefono</th>
@@ -44,7 +44,7 @@ export default class listaPacientes extends Component{
 					</thead>
 					<tbody>
 
-						{listaPacientes}
+						{listaPaciente}
 					</tbody>
 
 
