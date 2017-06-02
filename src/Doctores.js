@@ -6,6 +6,7 @@ import VerDoctores from './VerDoctores';
 export default class doctor extends Component{
 	render(){
 
+
 		let nulo = null;
 		let losdotores = [];
 
@@ -18,7 +19,6 @@ export default class doctor extends Component{
 						nulo = doctor.identificacionDoc;
 
 				});
-
 
 
 
