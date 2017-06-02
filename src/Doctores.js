@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
+import doctoresregistrados from './DoctoresRegistrados';
+import VerDoctores from './VerDoctores';
 
-export default class doctores extends Component{
+
+export default class doctor extends Component{
 	render(){
-		let cadadoctor =[];
-		let boton = [];
-		let termino = null;
+
+		let nulo = null;
+		let losdotores = [];
+
+
+				doctoresregistrados.forEach((doctor) => {if(doctor.id !== nulo)
+						{
+							losdotores.push(<VerDoctores doctor={doctor} key={doctor.identificacionDoc}/>);
+						}
+
+						nulo = doctor.identificacionDoc;
+
+				});
+
+
 
 
 
@@ -14,15 +29,29 @@ export default class doctores extends Component{
       <center>
 				<div>
         <h3>Doctores</h3>
-				<table className= "App-tablas">
+				<table className= "table1">
 					<thead>
 						<tr>
 							<th>Identificacion</th>
 							<th>Nombre</th>
 							<th>Apellido</th>
-							<th>Horario</th>
+							<th>Email</th>
+							<th>Nacimiento</th>
+							<th>Edad</th>
+							<th>Genero</th>
 						</tr>
 					</thead>
+
+          <tbody>
+
+					{losdotores}
+
+
+
+					</tbody>
+
+
+
 				</table>
 				</div>
 			 </center>

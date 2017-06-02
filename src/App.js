@@ -28,7 +28,18 @@ class App extends Component {
 
                  <li><Link to="/">Smile-Fresh</Link></li>
 
-                 <li><Link to="/doctores">Doctores</Link></li>
+
+
+                 <li><Link to="/doctores">Listado Doctores</Link></li>
+                 <li><Link to="/horarios">Horarios Doctores</Link></li>
+
+
+
+
+
+
+
+
                  <li><a href="#">Horarios</a></li>
                  <li><a href="#">Agendar Cita</a></li>
                  <li><Link to="/listaPacientes">Pacientes</Link></li>
