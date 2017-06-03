@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Doctores from './Doctores';
 import Horarios from './horarios';
+import Agendar from './Agendar';
 import listaPacientes from './listaPacientes';
 
 import inicio from './inicio';
@@ -38,7 +39,7 @@ class App extends Component {
 
 
 
-                 
+
 
                  <li><Link to="/doctores">Listado Doctores</Link></li>
                  <li><Link to="/horarios">Horarios Doctores</Link></li>
@@ -46,15 +47,9 @@ class App extends Component {
                   <li><Link to="/listaPacientes">Pacientes</Link></li>
                    <li><Link to="/CitasPorMes">Citas por mes</Link></li>
 
-
-
-
-
-
-
                  <li><a href="#">Horarios</a></li>
 
-                 <li><a href="#">Agendar Cita</a></li>
+                 <li><Link to="/agendar">Agendar Cita</Link></li>
 
                  <li><a href="#">Citas</a></li>
                  <li><a href="#">Recaudado</a></li>
@@ -63,17 +58,12 @@ class App extends Component {
        </div>
      </nav>
 
-
-
       <Route exact path="/" component={inicio}/>
       <Route path="/doctores" component={Doctores}/>
       <Route path="/horarios" component={Horarios}/>
       <Route path="/listaPacientes" component={listaPacientes}/>
       <Route path="/CitasPorMes" component={CitasPorMes}/>
-
-
-
-
+      <Route path="/agendar" component={Agendar}/>
 
    </div>
 
