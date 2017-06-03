@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
     "moment": "^2.18.1",
     "react": "^15.5.4",
     "react-big-calendar": "^0.14.0",
@@ -11,13 +14,14 @@
     "react-modal": "^1.7.7",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-tap-event-plugin": "^2.0.1",
+    "sqlite3": "^3.1.8"
   },
   "devDependencies": {
     "react-scripts": "1.0.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start | node app.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
