@@ -16,31 +16,32 @@ export default class Agendar extends Component{
 
   constructor(){
     super();
-    this.state = {
-      citasDisponibles: Array()
-    }
-  }
 
-  getCitasDisponibles(){
+    this.state = {
+      citasDisponibles: []
+    }
+
     var citas;
     axios.get('http://localhost:3888/api/cita').then((response)=>{
       citas = response.data;
+      citas = citas.filter(function(item){
+        return item.estado  == "Disponible"
+      });
 
+      for (var i = 0; i < citas.length; i++) {
+        citas[i].title = citas[i].estado + citas[i].hora;
+      }
+
+      this.setState({citasDisponibles: citas});
       console.log(citas);
     }, (err) =>{
-      console.log(err)
+      console.log(err);
     })
 
-    this.setState({citas: citas});
 
-    citas = citas.filter(function(item){
-      return item.estado  == "Disponible"
-    });
 
-    this.setState({citasDisponibles: citas});
 
   }
-
 
   handleSelectEvent(evento){
     console.log(evento);
@@ -50,9 +51,9 @@ export default class Agendar extends Component{
     console.log(objeto);
   }
 
-  render(){
 
-    this.getCitasDisponibles();
+
+  render(){
 
     return(
 
