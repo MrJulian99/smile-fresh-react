@@ -6,7 +6,7 @@ import Agendar from './Agendar';
 import listaPacientes from './listaPacientes';
 import Recaudado from './Recaudado';
 import inicio from './inicio';
-
+import Historias from './Historias'
 import CitasPorMes from './CitasPorMes';
 
 
@@ -43,16 +43,12 @@ class App extends Component {
 
                  <li><Link to="/doctores">Listado Doctores</Link></li>
                  <li><Link to="/horarios">Horarios Doctores</Link></li>
-
                   <li><Link to="/listaPacientes">Pacientes</Link></li>
                    <li><Link to="/CitasPorMes">Citas por mes</Link></li>
-
-                 <li><a href="#">Horarios</a></li>
+                   <li><Link to="/Historias">Historias</Link></li>
 
                  <li><Link to="/agendar">Agendar Cita</Link></li>
                   <li><Link to="/Recaudado">Recaudado</Link></li>
-
-                 <li><a href="#">Citas</a></li>
 
 
          </ul>
@@ -66,6 +62,7 @@ class App extends Component {
       <Route path="/CitasPorMes" component={CitasPorMes}/>
       <Route path="/agendar" component={Agendar}/>
       <Route path="/Recaudado" component={Recaudado}/>
+      <Route path="/Historias" component={Historias}/>
 
    </div>
 

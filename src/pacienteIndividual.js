@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 export default class PacienteIndividual extends Component{
 	
 	render(){
-		console.log(this.props);
+
 		return(
 			<tr>	
 					<td>{this.props.paciente.id} </td>

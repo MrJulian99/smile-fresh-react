@@ -27,25 +27,16 @@ export default class CitaPorMes extends Component{
 				    b=b.fecha.split("-");
 				    return new Date(a[0], a[1],a[2] ) - new Date(b[0], b[1], b[2])
 				  })
-
-			
-				listaCitasAux.forEach((cita)=>{
-
+					listaCitasAux.forEach((cita)=>{
 		 			if (cita.id !== final){
 		 			fecha1=cita.fecha.split("-")
-		 			//
-		 			if(fecha1[1]==fecha[1] && fecha1[0]==fecha[0]  ){
-		 				console.log("entro");
-	 				listaCitasMirar.push(cita);
-	 				//listaCitas.push(<CitaIndividual cita={cita} key={cita.id} />);
-	 				listaCitas.push(<tr><td>{cita.fecha}</td>
-					<td>{cita.id} </td></tr>
+		 			if(fecha1[1]==fecha[1] && fecha1[0]==fecha[0]  ){		 		
+	 				listaCitas.push(<CitaIndividual cita={cita} key={cita.id} />
 					);
 				
 	
 		 			}
-		 			//console.log("citas mes");
-		 			//console.log(listaCitasMirar);
+		 	
 		 			
 		 		}
 		 		
@@ -59,15 +50,7 @@ export default class CitaPorMes extends Component{
 
 
 
-		 /*	CitasRegistradas.forEach((cita)=>{
-		 		if (cita.fecha !== final){
-		 			listaCitas.push(<CitaIndividual cita={cita} key={cita.id} />);
-		 		}
-		 		final=cita.fecha;
-		 	
-		 		
-		 		
-		 	})*/
+		 
 				
 		return(
 

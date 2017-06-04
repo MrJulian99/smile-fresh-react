@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 export default class CitaIndividual extends Component{
 	
 	render(){
-		console.log(this.props);
+
 		return(
 			<tr>	
 					<td>{this.props.cita.id} </td>
