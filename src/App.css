@@ -26,6 +26,9 @@
 
 
 }
+.oculto .rbc-month-view{
+  z-index: -1;
+}
 
 
 

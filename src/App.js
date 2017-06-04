@@ -53,7 +53,7 @@ class App extends Component {
                   <li><Link to="/Recaudado">Recaudado</Link></li>
 
                  <li><a href="#">Citas</a></li>
-                 
+
 
          </ul>
        </div>
